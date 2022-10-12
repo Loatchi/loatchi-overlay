@@ -26,7 +26,8 @@ BDEPEND="dev-util/meson"
 inherit meson
 
 src_compile(){
-    meson_src_compile
+    meson_src_compile --buildtype release "${P}" build
+    meson_src_compile compile -C build
 }
 
 src_install(){
