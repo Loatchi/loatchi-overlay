@@ -11,7 +11,6 @@ SRC_URI="https://github.com/toolbox4minecraft/amidst/releases/download/v${PV}/am
 
 LICENSE="GNU"
 SLOT="0"
-KEYWORDS=""
 
 CDEPEND=""
 
