@@ -5,12 +5,12 @@ EAPI=8
 
 inherit java-pkg-2
 
-DESCRIPTION="${MAVEN_ID}"
 HOMEPAGE="https://github.com/toolbox4minecraft/amidst"
 SRC_URI="https://github.com/toolbox4minecraft/amidst/releases/download/v${PV}/amidst-v4-7.zip"
 
 LICENSE="GNU"
 SLOT="0"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 
 CDEPEND=""
 
