@@ -25,6 +25,6 @@ RDEPEND="
 S="${WORKDIR}"
 
 src_install(){
-    java-pkg_dojar "${DISTDIR}/${P}.jar"
-    java-pkg_dolauncher "${PN}" --jar  "/usr/share/${PN}/lib/${P}.jar"
+    java-pkg_newjar "${DISTDIR}/${P}.jar" "./${PN}.jar"
+    java-pkg_dolauncher
 }
