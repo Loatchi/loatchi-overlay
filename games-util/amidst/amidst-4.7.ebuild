@@ -26,5 +26,5 @@ S="${WORKDIR}"
 
 src_install(){
     java-pkg_dojar "${DISTDIR}/${P}.jar"
-    java-pkg_dolauncher "${PN}" --jar "${DISTDIR}/${P}.jar"
+    java-pkg_dolauncher "${PN}" --jar  "/usr/share/${PN}/lib/${P}.jar"
 }
