@@ -6,7 +6,7 @@ EAPI=8
 inherit java-pkg-2
 
 HOMEPAGE="https://github.com/toolbox4minecraft/amidst"
-SRC_URI="https://github.com/toolbox4minecraft/amidst/releases/download/v${PV}/amidst-v4-7.zip"
+SRC_URI="https://github.com/toolbox4minecraft/amidst/releases/download/v4.7/amidst-v4-7.jar -> ${P}.jar"
 
 LICENSE="GNU"
 SLOT="0"
@@ -25,6 +25,5 @@ RDEPEND="
 S="${WORKDIR}"
 
 src_install(){
-    java-pkg_newjar "Amidst.app/Contents/Java/amidst/amidst/4.7/amidst-4.7.jar" "./${PN}.jar"
-    java-pkg_dolauncher
+    java-pkg_dojar "${DISTDIR}/${P}.jar"
 }
