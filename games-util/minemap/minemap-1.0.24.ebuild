@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit java-pkg-2 desktop
+inherit java-pkg-2 desktop xdg-utils
 
 HOMEPAGE="https://github.com/hube12/Minemap"
 SRC_URI="https://github.com/hube12/Minemap/releases/download/1.0.24/MineMap-1.0.24.jar -> ${P}.jar"

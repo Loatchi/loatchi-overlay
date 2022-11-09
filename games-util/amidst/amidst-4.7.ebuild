@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit java-pkg-2 desktop
+inherit java-pkg-2 desktop xdg-utils
 
 HOMEPAGE="https://github.com/toolbox4minecraft/amidst"
 SRC_URI="https://github.com/toolbox4minecraft/amidst/releases/download/v4.7/amidst-v4-7.jar -> ${P}.jar"
