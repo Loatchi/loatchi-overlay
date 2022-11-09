@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit java-pkg-2
+inherit java-pkg-2 desktop
 
 HOMEPAGE="https://github.com/toolbox4minecraft/amidst"
 SRC_URI="https://github.com/toolbox4minecraft/amidst/releases/download/v4.7/amidst-v4-7.jar -> ${P}.jar"
@@ -27,4 +27,15 @@ S="${WORKDIR}"
 src_install(){
     java-pkg_newjar "${DISTDIR}/${P}.jar" "./${PN}.jar"
     java-pkg_dolauncher
+    newicon "amidst/icon/amidst-256x256.png" "${PN}.png"
+    make_desktop_entry "${PN}" "${PN}" "${PN}"
+
+}
+
+pkg_postinst() {
+	xdg_icon_cache_update
+}
+
+pkg_postrm() {
+	xdg_icon_cache_update
 }
