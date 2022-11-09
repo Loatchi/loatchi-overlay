@@ -25,8 +25,16 @@ RDEPEND="
 S="${WORKDIR}"
 
 src_install(){
+    java-pkg_newjar "${DISTDIR}/${P}.jar" "./${PN}.jar"
+    java-pkg_dolauncher "${PN}" --pkg_args "--no-update" # making sure the package is updated using Portage
     newicon icon/others/logo.png "${PN}.png"
     make_desktop_entry "${PN}" "${PN}" "${PN}"
-    java-pkg_newjar "${DISTDIR}/${P}.jar" "./${PN}.jar"
-    java-pkg_dolauncher --pkg_args "--no-update" # making sure the package is updated using Portage
+}
+
+pkg_postinst() {
+	xdg_icon_cache_update
+}
+
+pkg_postrm() {
+	xdg_icon_cache_update
 }
