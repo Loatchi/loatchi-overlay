@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit java-pkg-2
+inherit java-pkg-2 desktop
 
 HOMEPAGE="https://github.com/hube12/Minemap"
 SRC_URI="https://github.com/hube12/Minemap/releases/download/1.0.24/MineMap-1.0.24.jar -> ${P}.jar"
@@ -25,6 +25,8 @@ RDEPEND="
 S="${WORKDIR}"
 
 src_install(){
+    newicon icon/others/logo.png "${PN}.png"
+    make_desktop_entry "${PN}" "${PN}" "${PN}"
     java-pkg_newjar "${DISTDIR}/${P}.jar" "./${PN}.jar"
-    java-pkg_dolauncher
+    java-pkg_dolauncher --pkg_args "--no-update" # making sure the package is updated using Portage
 }
