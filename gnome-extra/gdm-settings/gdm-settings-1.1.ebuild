@@ -4,7 +4,7 @@
 EAPI=8
 PYTHON_COMPAT=( python3_{8..10} )
 
-inherit meson python-single-r1 xdg-utils desktop
+inherit meson python-single-r1 xdg-utils desktop gnome2-utils
 
 
 DESCRIPTION="A settings app for GNOME's Login/Display Manager, GDM"
