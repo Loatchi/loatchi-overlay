@@ -56,10 +56,12 @@ pkg_postinst() {
    fdo-mime_desktop_database_update
    gnome2_icon_cache_update
    gnome2_schemas_update
+   xdg_icon_cache_update
 }
 
 pkg_postrm() {
    fdo-mime_desktop_database_update
    gnome2_icon_cache_update
    gnome2_schemas_update
+   xdg_icon_cache_update
 }
