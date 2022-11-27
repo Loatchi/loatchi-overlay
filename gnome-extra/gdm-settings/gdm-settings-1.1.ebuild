@@ -47,14 +47,19 @@ src_test() {
 	virtx meson_src_test
 }
 
+pkg_preinst() {
+   gnome2_icon_savelist
+   gnome2_schemas_savelist
+}
+
 pkg_postinst() {
-	xdg_icon_cache_update
-	gnome2_gconf_install
-	gnome2_schemas_update
+   fdo-mime_desktop_database_update
+   gnome2_icon_cache_update
+   gnome2_schemas_update
 }
 
 pkg_postrm() {
-	xdg_icon_cache_update
-	gnome2_gconf_uninstall
-	gnome2_schemas_update
+   fdo-mime_desktop_database_update
+   gnome2_icon_cache_update
+   gnome2_schemas_update
 }
