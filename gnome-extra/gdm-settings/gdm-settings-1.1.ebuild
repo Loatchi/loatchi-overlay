@@ -49,8 +49,12 @@ src_test() {
 
 pkg_postinst() {
 	xdg_icon_cache_update
+	gnome2_gconf_install
+	gnome2_schemas_update
 }
 
 pkg_postrm() {
 	xdg_icon_cache_update
+	gnome2_gconf_uninstall
+	gnome2_schemas_update
 }
