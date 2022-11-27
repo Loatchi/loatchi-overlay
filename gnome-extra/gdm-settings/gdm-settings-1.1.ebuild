@@ -11,7 +11,7 @@ DESCRIPTION="A settings app for GNOME's Login/Display Manager, GDM"
 HOMEPAGE="https://github.com/realmazharhussain/gdm-settings"
 SRC_URI="https://github.com/realmazharhussain/gdm-settings/archive/refs/tags/v1.1.tar.gz -> ${P}.tar.gz"
 
-LICENSE="GPL-3+"
+LICENSE="AGPL-3+"
 SLOT="0"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
