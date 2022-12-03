@@ -4,7 +4,7 @@
 EAPI=8
 PYTHON_COMPAT=( python3_{8..10} )
 
-inherit meson python-single-r1 xdg-utils
+inherit meson python-single-r1 xdg-utils gnome2-utils
 
 
 DESCRIPTION="A settings app for GNOME's Login/Display Manager, GDM"
@@ -47,10 +47,16 @@ src_test() {
 	virtx meson_src_test
 }
 
+pkg_preinst() {
+   gnome2_schemas_savelist
+}
+
 pkg_postinst() {
+   gnome2_schemas_update
    xdg_icon_cache_update
 }
 
 pkg_postrm() {
+   gnome2_schemas_update
    xdg_icon_cache_update
 }
