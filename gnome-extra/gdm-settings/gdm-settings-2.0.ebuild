@@ -48,11 +48,9 @@ src_test() {
 }
 
 pkg_postinst() {
-   fdo-mime_desktop_database_update
    xdg_icon_cache_update
 }
 
 pkg_postrm() {
-   fdo-mime_desktop_database_update
    xdg_icon_cache_update
 }
