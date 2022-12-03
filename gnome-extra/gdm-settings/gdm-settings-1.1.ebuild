@@ -9,14 +9,14 @@ inherit meson python-single-r1 xdg-utils desktop gnome2-utils
 
 DESCRIPTION="A settings app for GNOME's Login/Display Manager, GDM"
 HOMEPAGE="https://github.com/realmazharhussain/gdm-settings"
-SRC_URI="https://github.com/realmazharhussain/gdm-settings/archive/refs/tags/v1.1.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/realmazharhussain/gdm-settings/archive/refs/tags/v${PV}.tar.gz"
 
 LICENSE="AGPL-3+"
 SLOT="0"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 
-KEYWORDS="~amd64 amd64"
+KEYWORDS="amd64"
 
 DEPEND="
     >=sys-devel/automake-1.16.1-r2
