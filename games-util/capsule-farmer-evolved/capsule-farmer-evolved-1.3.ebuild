@@ -45,7 +45,7 @@ src_install() {
     insinto "${DIR}"
     doins -r "${S}/src"/*
 
-    elog "Do not forget to change the credentials in ${DIR}/config/config.yaml"
+    elog "Do not forget to add the credentials in ~/.cache/capsule-farmer-evolved/config/config.yaml"
 
     fperms 755 "${DIR}/main.py"
 
