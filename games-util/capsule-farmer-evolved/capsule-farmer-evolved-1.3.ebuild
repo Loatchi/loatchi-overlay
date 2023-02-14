@@ -4,7 +4,7 @@
 EAPI=8
 PYTHON_COMPAT=( python3_10 )
 
-inherit python-r1 systemd
+inherit python-r1 systemd wrapper
 
 DESCRIPTION="A program to trick lolesports.com into thinking you are watching streams."
 HOMEPAGE="https://github.com/LeagueOfPoro/CapsuleFarmerEvolved"
@@ -34,20 +34,18 @@ src_unpack() {
 }
 
 src_install() {
+    local DIR="/opt/${PN}"
 
     einfo ${S}
 
-    insinto "/usr/share/${PN}"
+    insinto "${DIR}"
     doins -r "${S}/src"/*
     doins -r "${S}/config"
 
-    elog "Do not forget to change the credentials in /usr/share/${PN}/config/config.yaml"
+    elog "Do not forget to change the credentials in ${DIR}/config/config.yaml"
 
-    echo "#!/bin/sh" >> "${PN}"
-    echo "cd \"/usr/share/${PN}\"" >> "${PN}"
-    echo "python main.py" "\"\$@\"" >> "${PN}"
-
-    dobin "${PN}"
+    fperms 755 "${DIR}/main.py"
+    python_foreach_impl python_newexe "${D}/${DIR}/main.py" "${PN}"
 
     cat <<-EOF > "${PN}.service"
 		[Unit]
@@ -56,7 +54,7 @@ src_install() {
 
 		[Service]
 		ExecStart=/usr/bin/${PN}
-		WorkingDirectory=/path/to/CapsuleFarmerEvolved
+		WorkingDirectory=${DIR}
 		StandardOutput=syslog
 		StandardError=syslog
 		SyslogIdentifier=CapsuleFarmerEvolved
