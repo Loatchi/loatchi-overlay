@@ -4,11 +4,6 @@ After=network.target
 
 [Service]
 ExecStart=/usr/bin/capsule-farmer-evolved
-StandardOutput=syslog
-StandardError=syslog
-SyslogIdentifier=CapsuleFarmerEvolved
-User=root
-Group=root
 Restart=always
 RestartSec=5
 

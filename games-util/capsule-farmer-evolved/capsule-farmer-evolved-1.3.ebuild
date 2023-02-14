@@ -55,7 +55,7 @@ src_install() {
 
     dobin "${PN}"
 
-    systemd_dounit "${FILESDIR}/capsule-farmer-evolved.service"
+    systemd_douserunit "${FILESDIR}/capsule-farmer-evolved.service"
 
     if use systemd; then
         elog "You can start the ${PN} daemon by starting the capsule-farmer-evolved service: "
