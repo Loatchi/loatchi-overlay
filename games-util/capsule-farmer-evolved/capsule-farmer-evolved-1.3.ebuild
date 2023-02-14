@@ -28,6 +28,10 @@ RDEPEND="${DEPENDS}"
 
 KEYWORDS="amd64"
 
+PATCHES=(
+    "${FILESDIR}/capsule-farmer-evolved-1.3-change-config-and-logs-to-home-dir.diff"
+)
+
 src_unpack() {
   unpack ${A}
   S="${WORKDIR}/$(ls ${WORKDIR})"
@@ -40,7 +44,6 @@ src_install() {
 
     insinto "${DIR}"
     doins -r "${S}/src"/*
-    doins -r "${S}/config"
 
     elog "Do not forget to change the credentials in ${DIR}/config/config.yaml"
 
@@ -52,31 +55,11 @@ src_install() {
 
     dobin "${PN}"
 
-    cat <<-EOF > "${PN}.service"
-		[Unit]
-		Description=CapsuleFarmerEvolved
-		After=network.target
-
-		[Service]
-		ExecStart=/usr/bin/${PN}
-		WorkingDirectory=${DIR}
-		StandardOutput=syslog
-		StandardError=syslog
-		SyslogIdentifier=CapsuleFarmerEvolved
-		User=root
-		Group=root
-		Restart=always
-		RestartSec=5
-
-		[Install]
-		WantedBy=multi-user.target
-		EOF
-
-    systemd_dounit "${PN}.service"
+    systemd_dounit "${FILESDIR}/capsule-farmer-evolved.service"
 
     if use systemd; then
-        elog "You can start the ${PN} daemon by starting the ${PN} service: "
-        elog "systemctl start ${PN}.service"
+        elog "You can start the ${PN} daemon by starting the capsule-farmer-evolved service: "
+        elog "    systemctl start ${PN}.service"
     fi
 }
 
