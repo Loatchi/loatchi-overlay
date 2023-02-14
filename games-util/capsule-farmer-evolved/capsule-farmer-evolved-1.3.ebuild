@@ -45,7 +45,12 @@ src_install() {
     elog "Do not forget to change the credentials in ${DIR}/config/config.yaml"
 
     fperms 755 "${DIR}/main.py"
-    python_foreach_impl python_newexe "${D}/${DIR}/main.py" "${PN}"
+
+    echo "#!/bin/sh" >> "${PN}"
+    echo "cd \"${DIR}\"" >> "${PN}"
+    echo "python main.py" "\"\$@\"" >> "${PN}"
+
+    dobin "${PN}"
 
     cat <<-EOF > "${PN}.service"
 		[Unit]
