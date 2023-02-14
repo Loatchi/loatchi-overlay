@@ -5,7 +5,7 @@ After=network.target
 [Service]
 ExecStart=/usr/bin/capsule-farmer-evolved
 Restart=always
-RestartSec=5
+RestartSec=60
 
 [Install]
 WantedBy=multi-user.target

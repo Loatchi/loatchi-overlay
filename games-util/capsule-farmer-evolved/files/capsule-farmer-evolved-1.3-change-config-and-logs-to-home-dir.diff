@@ -1,5 +1,5 @@
 diff --git a/src/Config.py b/src/Config.py
-index 8f323ec..f70fd53 100644
+index 8f323ec..de2a5c1 100644
 --- a/src/Config.py
 +++ b/src/Config.py
 @@ -6,7 +6,7 @@ from pathlib import Path
@@ -20,11 +20,11 @@ index 8f323ec..f70fd53 100644
 +            # create the default one as a template
 +            with open(str((CACHE / Path("config/config.yaml"))), "w") as f:
 +                f.write("accounts:")
-+                f.write("  accountname:")
-+                f.write("    username: \"username\"")
-+                f.write("    password: \"password\"")
-+                f.write("  anotheraccountname:")
-+                f.write("    username: \"username\"")
++                f.write("  accountname:\n")
++                f.write("    username: \"username\"\n")
++                f.write("    password: \"password\"\n")
++                f.write("  anotheraccountname:\n")
++                f.write("    username: \"username\"\n")
 +                f.write("    password:  \"password\"")
              print("Press any key to exit...")
              input()
