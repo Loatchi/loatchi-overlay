@@ -1,0 +1,97 @@
+diff --git a/src/Config.py b/src/Config.py
+index f23a805..4e40972 100644
+--- a/src/Config.py
++++ b/src/Config.py
+@@ -5,7 +5,7 @@ from pathlib import Path
+ 
+ from Exceptions.InvalidCredentialsException import InvalidCredentialsException
+ 
+-
++CACHE = Path.home() / Path(".cache") / Path("capsule-farmer-evolved")
+ class Config:
+     """
+     A class that loads and stores the configuration
+@@ -45,7 +45,16 @@ class Config:
+                 self.connectorDrops = config.get("connectorDropsUrl", "")
+                 self.showHistoricalDrops = config.get("showHistoricalDrops", True)
+         except FileNotFoundError as ex:
+-            print(f"[red]CRITICAL ERROR: The configuration file cannot be found at {configPath}\nHave you extacted the ZIP archive and edited the configuration file?")
++            print(f"[red]CRITICAL ERROR: The configuration file cannot be found at {str(CACHE)}\n. Modify config/config.yaml in the cache.")
++            # create the default one as a template
++            with open(str((CACHE / Path("config/config.yaml"))), "w") as f:
++                f.write("accounts:\n")
++                f.write("  accountname:\n")
++                f.write("    username: \"username\"\n")
++                f.write("    password: \"password\"\n")
++                f.write("  anotheraccountname:\n")
++                f.write("    username: \"username\"\n")
++                f.write("    password:  \"password\"")
+             print("Press any key to exit...")
+             input()
+             raise ex
+@@ -88,9 +97,7 @@ class Config:
+         configPath = Path(configPath)
+         if configPath.exists():
+             return configPath
+-        if Path("../config/config.yaml").exists():
+-            return Path("../config/config.yaml")
+-        if Path("config/config.yaml").exists():
+-            return Path("config/config.yaml")
++        if (CACHE / Path("config/config.yaml")).exists():
++            return CACHE / Path("config/config.yaml")
+         
+         return configPath
+diff --git a/src/Logger.py b/src/Logger.py
+index 9375446..81db7ff 100644
+--- a/src/Logger.py
++++ b/src/Logger.py
+@@ -1,6 +1,8 @@
+ import logging
+ from logging.handlers import RotatingFileHandler
+ 
++from Config import CACHE
++
+ FILE_SIZE = 1024 * 1024 * 100  # 100 MB
+ BACKUP_COUNT = 5  # keep up to 5 files
+ 
+@@ -14,7 +16,7 @@ class Logger:
+             level = logging.WARNING
+ 
+         fileHandler = RotatingFileHandler(
+-            "./logs/capsulefarmer.log",
++            str(CACHE) + "/logs/capsulefarmer.log",
+             mode="a+",
+             maxBytes=FILE_SIZE,
+             backupCount=BACKUP_COUNT,
+diff --git a/src/main.py b/src/main.py
+index cffbb5f..d29a49a 100644
+--- a/src/main.py
++++ b/src/main.py
+@@ -3,7 +3,7 @@ from Exceptions.CapsuleFarmerEvolvedException import CapsuleFarmerEvolvedExcepti
+ from FarmThread import FarmThread
+ from GuiThread import GuiThread
+ from threading import Lock
+-from Config import Config
++from Config import Config, CACHE
+ from Logger import Logger
+ import logging
+ import sys
+@@ -14,6 +14,7 @@ from time import sleep, strftime, localtime
+ from Restarter import Restarter
+ from SharedData import SharedData
+ 
++
+ from Stats import Stats
+ from VersionManager import VersionManager
+ 
+@@ -34,8 +35,8 @@ def init() -> tuple[logging.Logger, Config]:
+     print("*********************************************************")
+     print()
+ 
+-    Path("./logs/").mkdir(parents=True, exist_ok=True)
+-    Path("./sessions/").mkdir(parents=True, exist_ok=True)
++    (CACHE / Path("logs")).mkdir(parents=True, exist_ok=True)
++    (CACHE / Path("sessions")).mkdir(parents=True, exist_ok=True)
+     config = Config(args.configPath)
+     log = Logger.createLogger(config.debug, CURRENT_VERSION)
+     if not VersionManager.isLatestVersion(CURRENT_VERSION):
