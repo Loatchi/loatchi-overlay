@@ -1,5 +1,34 @@
+diff --git a/src/Browser.py b/src/Browser.py
+index bef8e06..a6379c2 100644
+--- a/src/Browser.py
++++ b/src/Browser.py
+@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
+ from datetime import datetime
+ import threading
+ from time import sleep, time
+-from Config import Config
++from Config import Config, CACHE
+ from Exceptions.StatusCodeAssertException import StatusCodeAssertException
+ import pickle
+ from pathlib import Path
+@@ -252,12 +252,12 @@ class Browser:
+         return token, state
+ 
+     def __dumpCookies(self):
+-        with open(f'./sessions/{self.account}.saved', 'wb') as f:
++        with open(f'{str(CACHE)}/sessions/{self.account}.saved', 'wb') as f:
+             pickle.dump(self.client.cookies, f)
+ 
+     def __loadCookies(self):
+-        if Path(f'./sessions/{self.account}.saved').exists():
+-            with open(f'./sessions/{self.account}.saved', 'rb') as f:
++        if Path(f'{str(CACHE)}/sessions/{self.account}.saved').exists():
++            with open(f'{str(CACHE)}/sessions/{self.account}.saved', 'rb') as f:
+                 self.client.cookies.update(pickle.load(f))
+                 return True
+         return False
 diff --git a/src/Config.py b/src/Config.py
-index f23a805..4e40972 100644
+index 520d45c..d584e11 100644
 --- a/src/Config.py
 +++ b/src/Config.py
 @@ -5,7 +5,7 @@ from pathlib import Path
@@ -11,7 +40,7 @@ index f23a805..4e40972 100644
  class Config:
      """
      A class that loads and stores the configuration
-@@ -45,7 +45,16 @@ class Config:
+@@ -47,7 +47,16 @@ class Config:
                  self.connectorDrops = config.get("connectorDropsUrl", "")
                  self.showHistoricalDrops = config.get("showHistoricalDrops", True)
          except FileNotFoundError as ex:
@@ -29,7 +58,7 @@ index f23a805..4e40972 100644
              print("Press any key to exit...")
              input()
              raise ex
-@@ -88,9 +97,7 @@ class Config:
+@@ -90,9 +99,7 @@ class Config:
          configPath = Path(configPath)
          if configPath.exists():
              return configPath
