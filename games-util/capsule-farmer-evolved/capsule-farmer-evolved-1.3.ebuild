@@ -59,7 +59,7 @@ src_install() {
 
     if use systemd; then
         elog "You can start the ${PN} daemon by starting the capsule-farmer-evolved service: "
-        elog "    systemctl start ${PN}.service"
+        elog "    systemctl start --user ${PN}.service"
     fi
 }
 
