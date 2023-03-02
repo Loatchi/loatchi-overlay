@@ -1,6 +1,5 @@
 [Unit]
 Description=CapsuleFarmerEvolved
-After=network.target
 
 [Service]
 ExecStart=/usr/bin/capsule-farmer-evolved
