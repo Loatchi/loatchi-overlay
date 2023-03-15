@@ -1,0 +1,4 @@
+# Loatchi (2023-03-15)
+# Masked due to Riot taking action against bots watching lolesports.
+# Refer to Readme in https://github.com/LeagueOfPoro/CapsuleFarmerEvolved
+games-util/capsule-farmer-evolved
