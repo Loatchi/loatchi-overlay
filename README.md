@@ -4,9 +4,7 @@ A little repo containing all the ebuilds I'm working on.
 
 To add this overlay simply do:
 ```
-sudo eselect repository add loatchi git https://github.com/Loatchi/loatchi-overlay.git
-sudo emaint sync -r loatchi
-```
+sudo eselect repository enable loatchi
 ```
 Loatchi loves Gentoo (Linux)
  _______________________
