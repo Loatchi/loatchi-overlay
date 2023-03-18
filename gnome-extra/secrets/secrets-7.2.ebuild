@@ -33,6 +33,7 @@ src_prepare(){
     default
 
     sed -i 's/Cryptodome/Crypto/g' {profile.dat,gsecrets/utils.py} || die
+    sed -i '/gnome.post_install/,$d' meson.build || die
 }
 
 src_configure() {
@@ -44,6 +45,8 @@ src_configure() {
 src_install() {
 	meson_src_install
 	python_optimize
+
+	sed -i '1s/.*/#!\/usr\/bin\/env python3/' "${D}/usr/bin/secrets"
 }
 
 src_test() {
