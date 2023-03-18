@@ -29,6 +29,12 @@ RDEPEND="${DEPEND}
 	dev-python/validators
 "
 
+src_prepare(){
+    default
+
+    sed -i 's/Cryptodome/Crypto/g' {profile.dat,gsecrets/utils.py} || die
+}
+
 src_configure() {
     local emesonargs=(
 	)
