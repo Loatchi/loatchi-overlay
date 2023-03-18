@@ -331,7 +331,7 @@ SRC_URI="https://gitlab.gnome.org/World/Fragments/-/archive/${PV}/Fragments-${PV
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~amd64"
+KEYWORDS="amd64 ~amd64 ~arm ~arm64 ~ppc ~ppc64 ~x86"
 
 DEPEND="
     dev-libs/dbus-glib
@@ -378,9 +378,11 @@ pkg_preinst() {
 pkg_postinst() {
    gnome2_schemas_update
    xdg_icon_cache_update
+   xdg_desktop_database_update
 }
 
 pkg_postrm() {
    gnome2_schemas_update
    xdg_icon_cache_update
+   xdg_desktop_database_update
 }
