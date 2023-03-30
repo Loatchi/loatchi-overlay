@@ -347,7 +347,7 @@ DEPEND="
 # I'll gladly take any better solution, but it seems to work for now
 PATCHES="${FILESDIR}/fix-crash-at-startup.diff"
 
-QA_FLAGS_IGNORED="usr/bin/${PN}"
+QA_FLAGS_IGNORED="/usr/bin/${PN}"
 S="${WORKDIR}/${PN^}-${PV}"
 
 src_configure(){
