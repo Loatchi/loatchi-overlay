@@ -32,6 +32,12 @@ RDEPEND="${DEPEND}
 	sys-auth/polkit
 "
 
+src_prepare(){
+    default
+
+    sed -i '/gnome.post_install/,$d' meson.build || die
+}
+
 src_configure() {
     local emesonargs=(
 	)

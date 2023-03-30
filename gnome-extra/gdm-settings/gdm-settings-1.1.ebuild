@@ -16,7 +16,7 @@ SLOT="0"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 
-KEYWORDS="amd64"
+KEYWORDS="amd64 ~amd64"
 
 DEPEND="
     >=sys-devel/automake-1.16.1-r2
@@ -31,6 +31,12 @@ RDEPEND="${DEPEND}
 	sys-devel/gettext
 	sys-auth/polkit
 "
+
+src_prepare(){
+    default
+
+    sed -i '/gnome.post_install/,$d' meson.build || die
+}
 
 src_configure() {
     local emesonargs=(
