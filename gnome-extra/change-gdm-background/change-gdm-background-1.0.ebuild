@@ -15,6 +15,10 @@ RDEPEND="dev-libs/glib"
 DEPEND="${RDEPEND}"
 BDEPEND=""
 
+# Do not work as intended on OpenRC
+IUSE="systemd"
+REQUIRED_USE="systemd"
+
 S="${WORKDIR}/arch-change-gdm-background-master"
 
 src_install(){
