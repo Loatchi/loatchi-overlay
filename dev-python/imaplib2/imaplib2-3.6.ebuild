@@ -8,8 +8,10 @@ inherit distutils-r1
 
 DESCRIPTION="Threaded Python IMAP4 client."
 HOMEPAGE="https://github.com/jazzband/imaplib2"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="https://github.com/jazzband/imaplib2/archive/refs/tags/v${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+
+distutils_enable_tests pytest
