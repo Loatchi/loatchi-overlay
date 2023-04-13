@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-PYTHON_COMPAT=( python3_{8..11} )
+PYTHON_COMPAT=( python3_{9..11} )
 
 inherit meson python-single-r1 xdg-utils gnome2-utils
 
@@ -16,18 +16,19 @@ SLOT="0"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 
-KEYWORDS="~amd64 amd64"
+KEYWORDS="~amd64"
 
-DEPEND="
-    >=sys-devel/automake-1.16.1-r2
+BDEPEND="
     dev-util/blueprint-compiler
+    sys-devel/automake
+    dev-libs/gobject-introspection
 "
-RDEPEND="${DEPEND}
-    ${PYTHON_DEPS}
+
+RDEPEND="
 	gnome-base/gdm
 	gui-libs/libadwaita
 	dev-libs/glib
-	dev-python/pygobject
+	$(python_gen_cond_dep 'dev-python/pygobject[${PYTHON_USEDEP}]' $PYTHON_COMPAT)
 	sys-devel/gettext
 	sys-auth/polkit
 "
