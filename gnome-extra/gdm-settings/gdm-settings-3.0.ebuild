@@ -4,7 +4,9 @@
 EAPI=8
 PYTHON_COMPAT=( python3_{9..11} )
 
-inherit meson python-single-r1 xdg-utils gnome2-utils
+PLOCALES="ar bn cs de es fa fr he it ja ko nb nl oc pt sv tr ur vi zh eu pt_BR id fi ru"
+
+inherit meson python-single-r1 xdg-utils gnome2-utils plocale
 
 
 DESCRIPTION="A settings app for GNOME's Login/Display Manager, GDM"
@@ -33,15 +35,28 @@ RDEPEND="
 	sys-auth/polkit
 "
 
+for x in ${PLOCALES}; do
+	IUSE+=" l10n_${x}"
+done
+
+uninstall_language(){
+    rm "po/$1.po"
+    sed -i "/^$1\$/d" "po/LINGUAS"
+}
+
 src_prepare(){
     default
 
+    plocale_find_changes "po/" "" ".po"
+
     sed -i '/gnome.post_install/,$d' meson.build || die
+
+    plocale_for_each_disabled_locale uninstall_language
+    elog "Removed support for those languages:" $(plocale_get_locales disabled)
 }
 
 src_configure() {
-    local emesonargs=(
-	)
+    local emesonargs=( )
 	meson_src_configure
 }
 
