@@ -10,8 +10,8 @@ inherit meson python-single-r1 xdg-utils gnome2-utils plocale
 
 
 DESCRIPTION="A settings app for GNOME's Login/Display Manager, GDM"
-HOMEPAGE="https://github.com/realmazharhussain/gdm-settings"
-SRC_URI="https://github.com/realmazharhussain/gdm-settings/archive/refs/tags/v${PV}.tar.gz"
+HOMEPAGE="https://github.com/gdm-settings/gdm-settings"
+SRC_URI="https://github.com/gdm-settings/gdm-settings/archive/refs/tags/v${PV}.tar.gz"
 
 LICENSE="AGPL-3+"
 SLOT="0"
