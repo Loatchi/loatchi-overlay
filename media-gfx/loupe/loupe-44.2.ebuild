@@ -370,7 +370,7 @@ declare -A GIT_CRATES=(
      [librsvg]="https://github.com/GNOME/librsvg;b831e077174ae608d8cd09e532fc0e7ce1fe5c4f"
 )
 
-inherit cargo meson
+inherit cargo meson xdg-utils gnome2-utils
 
 DESCRIPTION="A simple image viewer application written with GTK4 and Rust."
 HOMEPAGE="https://gitlab.gnome.org/Incubator/loupe"
