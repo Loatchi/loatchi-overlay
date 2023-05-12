@@ -15,12 +15,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
-	>=dev-python/argon2-cffi-19.2.0[${PYTHON_USEDEP}]
-	>=dev-python/construct-2.10.54[${PYTHON_USEDEP}]
+	>=dev-python/argon2-cffi-21.3.0[${PYTHON_USEDEP}]
+	>=dev-python/construct-2.10.68[${PYTHON_USEDEP}]
 	>=dev-python/future-0.18.2[${PYTHON_USEDEP}]
-	>=dev-python/lxml-4.3.5[${PYTHON_USEDEP}]
-	>=dev-python/pycryptodome-3.8.2[${PYTHON_USEDEP}]
-	>=dev-python/python-dateutil-2.8.1[${PYTHON_USEDEP}]
+	>=dev-python/lxml-4.8.0[${PYTHON_USEDEP}]
+	>=dev-python/pycryptodome-3.14.1[${PYTHON_USEDEP}]
+	>=dev-python/python-dateutil-2.8.2[${PYTHON_USEDEP}]
 "
 DEPEND="${RDEPEND}"
 
