@@ -379,9 +379,10 @@ SRC_URI="https://gitlab.gnome.org/Incubator/loupe/-/archive/${PV}/loupe-${PV}.ta
 "
 
 DEPEND="
-    >=gui-libs/gtk-4.10
-    >=gui-libs/libadwaita-1.3.0
+    >=gui-libs/gtk-4.11.2
+    >=gui-libs/libadwaita-1.3.99
     dev-libs/libgweather
+    media-libs/lcms
     gnome-base/librsvg
     >=media-libs/libheif-1.14.2
 "
@@ -390,7 +391,7 @@ RDEPEND="${DEPEND}"
 
 LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD BSD-2 Boost-1.0 CC0-1.0 GPL-3+ LGPL-2.1+ MIT MIT-0 MPL-2.0 Unicode-DFS-2016 Unlicense ZLIB"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /

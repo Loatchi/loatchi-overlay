@@ -379,12 +379,12 @@ SRC_URI="https://gitlab.gnome.org/Incubator/loupe/-/archive/${PV}/loupe-${PV}.ta
 "
 
 DEPEND="
-    gui-libs/gtk
-    gui-libs/libadwaita
+    >=gui-libs/gtk-4.11.1
+    >=gui-libs/libadwaita-1.3.0
     dev-libs/libgweather
     media-libs/lcms
     gnome-base/librsvg
-    media-libs/libheif
+    >=media-libs/libheif-1.14.2
 "
 
 RDEPEND="${DEPEND}"

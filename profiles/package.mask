@@ -2,8 +2,3 @@
 # Masked due to Riot taking action against bots watching lolesports.
 # Refer to Readme in https://github.com/LeagueOfPoro/CapsuleFarmerEvolved
 games-util/capsule-farmer-evolved
-
-# Loatchi (2023-05-02)
-# requires >=gtk-4.11.1 which is not yet in gentoo's tree
-# and I'm not planing to add gtk to my overlay, sticking with loupe-44.0
->=media-gfx/loupe-44.2
