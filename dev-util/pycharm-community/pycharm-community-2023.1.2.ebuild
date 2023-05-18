@@ -7,7 +7,7 @@ inherit desktop readme.gentoo-r1 wrapper xdg-utils
 
 DESCRIPTION="Intelligent Python IDE with unique code assistance and analysis"
 HOMEPAGE="http://www.jetbrains.com/pycharm/"
-SRC_URI="https://download.jetbrains.com/python/pycharm-community-2023.1.1.tar.gz"
+SRC_URI="https://download.jetbrains.com/python/pycharm-community-2023.1.2.tar.gz"
 
 LICENSE="Apache-2.0 BSD CDDL MIT-with-advertising"
 SLOT="0"
@@ -110,7 +110,7 @@ src_install() {
 
 	if ! use bundled-jdk; then
                 rm -r "${D}/${DIR}/${JRE_DIR}" || die "Unable to remove the bundled JRE."
-        fi
+    fi
 
 }
 
