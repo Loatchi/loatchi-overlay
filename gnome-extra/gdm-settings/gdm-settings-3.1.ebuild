@@ -26,6 +26,8 @@ BDEPEND="
     dev-libs/gobject-introspection
 "
 
+PATCHES="${FILESDIR}/gdm-wallpaper-fix.diff"
+
 RDEPEND="
 	gnome-base/gdm
 	gui-libs/libadwaita
