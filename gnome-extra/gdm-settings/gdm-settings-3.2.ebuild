@@ -4,7 +4,7 @@
 EAPI=8
 PYTHON_COMPAT=( python3_{9..11} )
 
-PLOCALES="ar bn cs de es fa fr he it ja ko nb nl oc pt sv tr ur vi zh eu pt_BR id fi ru"
+PLOCALES="ar bn cs de es eu fa fi fr he id it ja ko nb nl oc pt pt_BR ru sk sv tr uk ur vi zh"
 
 inherit meson python-single-r1 xdg-utils gnome2-utils plocale
 
@@ -25,8 +25,6 @@ BDEPEND="
     sys-devel/automake
     dev-libs/gobject-introspection
 "
-
-PATCHES="${FILESDIR}/gdm-wallpaper-fix.diff"
 
 RDEPEND="
 	gnome-base/gdm
