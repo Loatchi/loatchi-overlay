@@ -3,9 +3,11 @@
 
 EAPI=7
 
+inherit rpm
+
 DESCRIPTION="Epson Inkjet Printer Driver (ESC/P-R)"
 HOMEPAGE="https://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
-SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/14/48/15/c864d000b06bebeec8832ce6f68bb079c36d838a/epson-inkjet-printer-escpr-1.7.26-1lsb3.2.tar.gz"
+SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/14/61/06/ad3f08f88782de47a1aec9acda205e354309636e/epson-inkjet-printer-escpr-1.8.0-1.src.rpm"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,6 +20,10 @@ PATCHES=(
 	"${FILESDIR}/1.6.5-warnings.patch"
 	"${FILESDIR}/${PN}-1.7.7-fnocommon.patch"
 )
+
+src_unpack() {
+    rpm_src_unpack "${A}"
+}
 
 src_configure() {
 	econf --disable-shared
