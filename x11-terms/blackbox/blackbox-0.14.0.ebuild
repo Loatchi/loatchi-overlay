@@ -34,18 +34,20 @@ src_prepare() {
 
     # marble is a lib for writing gnome software, however its name changed to 'pqmarble' which leads to a build failure
     # here. Changing the name to match the one in loatchi's tree is sufficient
-    sed -i "s/marble/pqmarble/g" src/meson.build
-    find src -type f -exec sed -i 's/Marble/PQMarble/g' {} \;
+    # sed -i "s/marble/pqmarble/g" src/meson.build
+    # find src -type f -exec sed -i 's/Marble/PQMarble/g' {} \;
 
-    # should be done in source code in the future : https://gitlab.gnome.org/raggesilver/blackbox/-/merge_requests/60/pipelines
-    sed -i "s/'appdata'/'metainfo'/g" data/meson.build
+    # should be done in source code in the future : https://gitlab.gnome.org/raggesilver/blackbox/-/merge_requests/60/pipelines DONE !
+    # sed -i "s/'appdata'/'metainfo'/g" data/meson.build
 
     vala_setup
     default
 }
 
 src_configure() {
-    local emesonargs=( )
+    local emesonargs=(
+        -Dblackbox_is_flatpak=false
+    )
 	meson_src_configure
 }
 
