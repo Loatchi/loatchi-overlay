@@ -15,6 +15,10 @@ SLOT="0"
 
 KEYWORDS="~amd64 amd64"
 
+BDEPEND="
+    <dev-lang/vala-0.56.11
+"
+
 RDEPEND="
     dev-libs/glib
     gui-libs/gtk
