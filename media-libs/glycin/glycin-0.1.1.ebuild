@@ -318,7 +318,7 @@ SRC_URI="https://gitlab.gnome.org/sophie-h/glycin/-/archive/${PV}/glycin-${PV}.t
     $(cargo_crate_uris)
 "
 
-IUSE="heif svg webp"
+IUSE="$IUSE heif svg webp"
 
 DEPEND="
     >=gui-libs/gtk-4.12.0
@@ -348,9 +348,19 @@ src_prepare(){
 }
 
 src_configure() {
+
+    local loaders=('glycin-image-rs','glycin-jxl')
+
+    if use heif; then
+        loaders+=('glycin-heif')
+    fi
+
+    if use svg; then
+        loaders+=('glycin-svg')
+    fi
+
     local emesonargs=(
-        $(meson_use heif glycin-heif)
-        $(meson_use bindist glycin-svg)
+        -Dloaders=$(echo "${loaders%,}")
     )
     meson_src_configure
 }
