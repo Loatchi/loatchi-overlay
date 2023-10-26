@@ -312,7 +312,7 @@ CRATES="
 
 inherit cargo meson xdg-utils gnome2-utils
 
-DESCRIPTION="A simple image viewer application written with GTK4 and Rust."
+DESCRIPTION="Sandboxed and extendable image decoding"
 HOMEPAGE="https://gitlab.gnome.org/sophie-h/glycin"
 SRC_URI="https://gitlab.gnome.org/sophie-h/glycin/-/archive/${PV}/glycin-${PV}.tar.gz
     $(cargo_crate_uris)
