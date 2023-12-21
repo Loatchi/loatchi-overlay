@@ -5,6 +5,7 @@
 
 EAPI=8
 
+
 CRATES="
 	addr2line@0.21.0
 	adler@1.0.2
@@ -311,7 +312,7 @@ pkg_postinst() {
    xdg_icon_cache_update
    xdg_desktop_database_update
 }
-
+    
 pkg_postrm() {
    gnome2_schemas_update
    xdg_icon_cache_update
