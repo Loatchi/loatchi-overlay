@@ -2,3 +2,7 @@
 # Masked due to Riot taking action against bots watching lolesports.
 # Refer to Readme in https://github.com/LeagueOfPoro/CapsuleFarmerEvolved
 games-util/capsule-farmer-evolved
+
+# Loatchi (2024-01-17)
+# Waiting for Gnome46.
+media-gfx/loupe-46_alpha
