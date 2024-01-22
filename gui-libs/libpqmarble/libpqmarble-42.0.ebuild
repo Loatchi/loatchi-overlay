@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 amd64"
 
 BDEPEND="
-    <dev-lang/vala-0.56.11
+    >=dev-lang/vala-0.56.14
 "
 
 RDEPEND="
