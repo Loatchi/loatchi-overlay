@@ -308,8 +308,6 @@ S="${WORKDIR}/loupe-46.alpha"
 src_prepare(){
     default
 
-    echo $(pwd)
-
     # cargo.eclass works with gitlab uris and gitlab.gnome.org is not considered a gitlab uri :-(
     sed -i "s/gitlab.gnome.org/github.com/g" Cargo.{toml,lock} || die
 
