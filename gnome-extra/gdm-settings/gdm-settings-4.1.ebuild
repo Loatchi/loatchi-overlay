@@ -4,7 +4,7 @@
 EAPI=8
 PYTHON_COMPAT=( python3_{9..11} )
 
-PLOCALES="ar bn cs de es eu fa fi fr he id it ja ko nb nl oc pt pt_BR ru sk sv tr uk ur vi zh"
+PLOCALES="ar bn cs de es eu fa fi fr he id it ja ko nb nl oc pl pt pt_BR ru sk sv tr uk ur vi zh"
 
 inherit meson python-single-r1 xdg-utils gnome2-utils plocale
 
@@ -22,7 +22,7 @@ KEYWORDS="~amd64"
 
 BDEPEND="
     dev-util/blueprint-compiler
-    sys-devel/automake
+    dev-build/automake
     dev-libs/gobject-introspection
 "
 
