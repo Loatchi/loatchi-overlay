@@ -12,7 +12,7 @@ CRATES="
 	android-tzdata@0.1.1
 	android_system_properties@0.1.5
 	anstream@0.6.11
-	anstyle@1.0.5
+	anstyle@1.0.6
 	anstyle-parse@0.2.3
 	anstyle-query@1.0.2
 	anstyle-wincon@3.0.2
@@ -49,7 +49,7 @@ CRATES="
 	chrono@0.4.33
 	clap@4.4.18
 	clap_builder@4.4.18
-	clap_complete@4.4.9
+	clap_complete@4.4.10
 	clap_derive@4.4.7
 	clap_lex@0.6.0
 	colorchoice@1.0.0
@@ -104,7 +104,7 @@ CRATES="
 	h2@0.3.24
 	hashbrown@0.14.3
 	heck@0.4.1
-	hermit-abi@0.3.4
+	hermit-abi@0.3.5
 	hex@0.4.3
 	home@0.5.9
 	http@0.2.11
@@ -114,23 +114,23 @@ CRATES="
 	httpdate@1.0.3
 	hyper@0.14.28
 	hyper-rustls@0.24.2
-	iana-time-zone@0.1.59
+	iana-time-zone@0.1.60
 	iana-time-zone-haiku@0.1.2
 	idna@0.5.0
-	indexmap@2.2.1
+	indexmap@2.2.2
 	indicatif@0.17.7
 	instant@0.1.12
 	io-lifetimes@1.0.11
 	ipnet@2.9.0
 	itertools@0.12.1
 	itoa@1.0.10
-	js-sys@0.3.67
+	js-sys@0.3.68
 	jsonwebtoken@9.2.0
 	lazy-regex@3.1.0
 	lazy-regex-proc_macros@3.1.0
 	lazy_static@1.4.0
-	libc@0.2.152
-	libium@1.24.1
+	libc@0.2.153
+	libium@1.25.0
 	linux-raw-sys@0.3.8
 	linux-raw-sys@0.4.13
 	log@0.4.20
@@ -139,11 +139,12 @@ CRATES="
 	memoffset@0.7.1
 	memoffset@0.9.0
 	mime@0.3.17
-	miniz_oxide@0.7.1
+	miniz_oxide@0.7.2
 	mio@0.8.10
 	murmur2@0.1.0
 	nix@0.26.4
 	num-bigint@0.4.4
+	num-conv@0.1.0
 	num-integer@0.1.45
 	num-traits@0.2.17
 	num_cpus@1.16.0
@@ -152,7 +153,7 @@ CRATES="
 	objc-foundation@0.1.1
 	objc_id@0.1.1
 	object@0.32.2
-	octocrab@0.33.3
+	octocrab@0.33.4
 	once_cell@1.19.0
 	openssl-probe@0.1.5
 	ordered-stream@0.2.0
@@ -165,7 +166,7 @@ CRATES="
 	pin-utils@0.1.0
 	piper@0.2.1
 	polling@2.8.0
-	polling@3.3.2
+	polling@3.4.0
 	pollster@0.3.0
 	portable-atomic@1.6.0
 	powerfmt@0.2.0
@@ -177,16 +178,15 @@ CRATES="
 	rand_chacha@0.3.1
 	rand_core@0.6.4
 	raw-window-handle@0.5.2
-	redox_syscall@0.4.1
 	regex@1.10.3
 	regex-automata@0.4.5
 	regex-syntax@0.8.2
-	reqwest@0.11.23
+	reqwest@0.11.24
 	rfd@0.13.0
 	ring@0.17.7
 	rustc-demangle@0.1.23
 	rustix@0.37.27
-	rustix@0.38.30
+	rustix@0.38.31
 	rustls@0.21.10
 	rustls-native-certs@0.6.3
 	rustls-pemfile@1.0.4
@@ -218,17 +218,18 @@ CRATES="
 	strsim@0.10.0
 	syn@1.0.109
 	syn@2.0.48
+	sync_wrapper@0.1.2
 	system-configuration@0.5.1
 	system-configuration-sys@0.5.0
-	tempfile@3.9.0
+	tempfile@3.10.0
 	thiserror@1.0.56
 	thiserror-impl@1.0.56
-	time@0.3.31
+	time@0.3.34
 	time-core@0.1.2
-	time-macros@0.2.16
+	time-macros@0.2.17
 	tinyvec@1.6.0
 	tinyvec_macros@0.1.1
-	tokio@1.35.1
+	tokio@1.36.0
 	tokio-macros@2.2.0
 	tokio-rustls@0.24.1
 	tokio-util@0.7.10
@@ -256,14 +257,14 @@ CRATES="
 	waker-fn@1.1.1
 	want@0.3.1
 	wasi@0.11.0+wasi-snapshot-preview1
-	wasm-bindgen@0.2.90
-	wasm-bindgen-backend@0.2.90
-	wasm-bindgen-futures@0.4.40
-	wasm-bindgen-macro@0.2.90
-	wasm-bindgen-macro-support@0.2.90
-	wasm-bindgen-shared@0.2.90
-	web-sys@0.3.67
-	webpki-roots@0.25.3
+	wasm-bindgen@0.2.91
+	wasm-bindgen-backend@0.2.91
+	wasm-bindgen-futures@0.4.41
+	wasm-bindgen-macro@0.2.91
+	wasm-bindgen-macro-support@0.2.91
+	wasm-bindgen-shared@0.2.91
+	web-sys@0.3.68
+	webpki-roots@0.25.4
 	winapi@0.3.9
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-x86_64-pc-windows-gnu@0.4.0
@@ -286,11 +287,11 @@ CRATES="
 	windows_x86_64_gnullvm@0.52.0
 	windows_x86_64_msvc@0.48.5
 	windows_x86_64_msvc@0.52.0
-	winnow@0.5.35
+	winnow@0.5.39
 	winreg@0.50.0
-	xdg-home@1.0.0
-	zbus@3.14.1
-	zbus_macros@3.14.1
+	xdg-home@1.1.0
+	zbus@3.15.0
+	zbus_macros@3.15.0
 	zbus_names@2.6.0
 	zeroize@1.7.0
 	zvariant@3.15.0
