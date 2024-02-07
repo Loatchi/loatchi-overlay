@@ -7,7 +7,7 @@ inherit rpm
 
 DESCRIPTION="Epson Inkjet Printer Driver (ESC/P-R)"
 HOMEPAGE="https://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
-SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/15/47/99/379a81c231d0b6b3dfb3db2032ff6e23f7ccaa34/epson-inkjet-printer-escpr-1.8.3-1.src.rpm"
+SRC_URI="https://download3.ebz.epson.net/dsc/f/03/00/15/57/23/873ff1cc80b160f1f6427dfb729f7a17181d6679/epson-inkjet-printer-escpr-1.8.4-1.src.rpm"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,7 +17,7 @@ DEPEND="net-print/cups"
 RDEPEND="${DEPEND}"
 
 PATCHES=(
-	"${FILESDIR}/1.6.5-warnings.patch"
+	"${FILESDIR}/1.6.5-warnings.diff"
 	"${FILESDIR}/${PN}-1.7.7-fnocommon.patch"
 )
 
