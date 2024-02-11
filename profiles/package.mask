@@ -5,4 +5,8 @@ games-util/capsule-farmer-evolved
 
 # Loatchi (2024-01-17)
 # Waiting for Gnome46.
-=media-gfx/loupe-46_alpha
+>=media-gfx/loupe-46_alpha
+
+# Loatchi (2024-02-11)
+# Waiting for Gnome46.
+>=media-libs/glycin-1.0_alpha
