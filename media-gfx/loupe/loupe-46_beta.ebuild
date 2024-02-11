@@ -10,60 +10,66 @@ CRATES="
 	addr2line@0.21.0
 	adler@1.0.2
 	aho-corasick@1.1.2
+	anstream@0.6.11
+	anstyle@1.0.6
+	anstyle-parse@0.2.3
+	anstyle-query@1.0.2
+	anstyle-wincon@3.0.2
 	anyhow@1.0.79
 	arc-swap@1.6.0
-	ashpd@0.6.7
+	ashpd@0.7.0
 	async-broadcast@0.5.1
-	async-channel@1.9.0
-	async-channel@2.1.1
+	async-channel@2.2.0
 	async-executor@1.8.0
 	async-fs@1.6.0
-	async-fs@2.1.0
+	async-fs@2.1.1
 	async-global-executor@2.4.1
 	async-io@1.13.0
-	async-io@2.2.2
+	async-io@2.3.1
 	async-lock@2.8.0
-	async-lock@3.2.0
+	async-lock@3.3.0
+	async-net@2.0.0
 	async-process@1.8.1
-	async-process@2.0.1
 	async-recursion@1.0.5
 	async-signal@0.2.5
-	async-std@1.12.0
 	async-task@4.7.0
 	async-trait@0.1.77
 	atomic-waker@1.1.2
 	autocfg@1.1.0
 	backtrace@0.3.69
 	bitflags@1.3.2
-	bitflags@2.4.1
+	bitflags@2.4.2
 	block@0.1.6
 	block-buffer@0.10.4
 	blocking@1.5.1
-	bumpalo@3.14.0
-	bytemuck@1.14.0
+	bytemuck@1.14.3
 	byteorder@1.5.0
-	cairo-rs@0.18.5
-	cairo-sys-rs@0.18.2
+	cairo-rs@0.19.1
+	cairo-sys-rs@0.19.1
 	cc@1.0.83
-	cfg-expr@0.15.6
+	cfg-expr@0.15.7
 	cfg-if@1.0.0
+	colorchoice@1.0.0
 	concurrent-queue@2.4.0
 	cpufeatures@0.2.12
 	crc32fast@1.3.2
-	crossbeam-utils@0.8.18
+	crossbeam-utils@0.8.19
 	crypto-common@0.1.6
 	derivative@2.2.0
 	digest@0.10.7
 	dunce@1.0.4
 	enumflags2@0.7.8
 	enumflags2_derive@0.7.8
-	env_logger@0.10.1
+	env_filter@0.1.0
+	env_logger@0.11.1
 	equivalent@1.0.1
 	errno@0.3.8
 	event-listener@2.5.3
 	event-listener@3.1.0
 	event-listener@4.0.3
+	event-listener@5.0.0
 	event-listener-strategy@0.4.0
+	event-listener-strategy@0.5.0
 	fastrand@1.9.0
 	fastrand@2.0.1
 	field-offset@0.3.6
@@ -77,77 +83,75 @@ CRATES="
 	futures-executor@0.3.30
 	futures-io@0.3.30
 	futures-lite@1.13.0
-	futures-lite@2.1.0
+	futures-lite@2.2.0
 	futures-macro@0.3.30
 	futures-sink@0.3.30
 	futures-task@0.3.30
 	futures-util@0.3.30
-	gdk-pixbuf@0.18.5
-	gdk-pixbuf-sys@0.18.0
-	gdk4@0.7.3
-	gdk4-sys@0.7.2
-	gdk4-wayland@0.7.2
-	gdk4-wayland-sys@0.7.2
-	gdk4-x11@0.7.2
-	gdk4-x11-sys@0.7.2
+	gdk-pixbuf@0.19.0
+	gdk-pixbuf-sys@0.19.0
+	gdk4@0.8.0
+	gdk4-sys@0.8.0
+	gdk4-wayland@0.8.0
+	gdk4-wayland-sys@0.8.0
+	gdk4-x11@0.8.0
+	gdk4-x11-sys@0.8.0
 	generic-array@0.14.7
-	getrandom@0.2.11
+	getrandom@0.2.12
 	gettext-rs@0.7.0
 	gettext-sys@0.21.3
 	gimli@0.28.1
-	gio@0.18.4
-	gio-sys@0.18.1
-	glib@0.18.5
-	glib-macros@0.18.5
-	glib-sys@0.18.1
-	gloo-timers@0.2.6
-	glycin@1.0.0-alpha.2
-	glycin-utils@1.0.0-alpha.2
-	gobject-sys@0.18.0
-	graphene-rs@0.18.1
-	graphene-sys@0.18.1
-	gsk4@0.7.3
-	gsk4-sys@0.7.3
-	gtk4@0.7.3
-	gtk4-macros@0.7.2
-	gtk4-sys@0.7.3
+	gio@0.19.0
+	gio-sys@0.19.0
+	glib@0.19.0
+	glib-macros@0.19.0
+	glib-sys@0.19.0
+	glycin@1.0.0-beta
+	glycin-utils@1.0.0-beta
+	gobject-sys@0.19.0
+	graphene-rs@0.19.0
+	graphene-sys@0.19.0
+	gsk4@0.8.0
+	gsk4-sys@0.8.0
+	gtk4@0.8.0
+	gtk4-macros@0.8.0
+	gtk4-sys@0.8.0
 	gvdb@0.5.3
 	gvdb-macros@0.1.11
-	gweather-sys@4.3.1
+	gweather-sys@4.4.0
 	hashbrown@0.14.3
 	heck@0.4.1
-	hermit-abi@0.3.3
+	hermit-abi@0.3.5
 	hex@0.4.3
 	humantime@2.1.0
 	idna@0.5.0
-	indexmap@2.1.0
+	indexmap@2.2.2
 	instant@0.1.12
 	io-lifetimes@1.0.11
-	is-terminal@0.4.10
 	itoa@1.0.10
-	jobserver@0.1.27
-	js-sys@0.3.66
+	jobserver@0.1.28
 	kamadak-exif@0.5.5
-	kv-log-macro@1.0.7
 	lazy_static@1.4.0
-	lcms2@6.0.3
+	lcms2@6.0.4
 	lcms2-sys@4.0.4
-	libadwaita@0.5.3
-	libadwaita-sys@0.5.3
-	libc@0.2.151
-	libgweather@4.3.1
+	libadwaita@0.6.0
+	libadwaita-sys@0.6.0
+	libc@0.2.153
+	libgweather@4.4.0
+	libseccomp@0.3.0
+	libseccomp-sys@0.2.1
 	linux-raw-sys@0.3.8
-	linux-raw-sys@0.4.12
+	linux-raw-sys@0.4.13
 	litrs@0.4.1
 	locale_config@0.3.0
 	log@0.4.20
 	malloc_buf@0.0.6
 	memchr@2.7.1
 	memfd@0.6.4
-	memmap2@0.9.3
+	memmap2@0.9.4
 	memoffset@0.7.1
 	memoffset@0.9.0
-	miniz_oxide@0.7.1
+	miniz_oxide@0.7.2
 	mutate_once@0.1.1
 	nix@0.26.4
 	nix@0.27.1
@@ -157,50 +161,47 @@ CRATES="
 	object@0.32.2
 	once_cell@1.19.0
 	ordered-stream@0.2.0
-	pango@0.18.3
-	pango-sys@0.18.0
+	pango@0.19.0
+	pango-sys@0.19.0
 	parking@2.2.0
 	percent-encoding@2.3.1
 	pin-project-lite@0.2.13
 	pin-utils@0.1.0
 	piper@0.2.1
-	pkg-config@0.3.28
+	pkg-config@0.3.29
 	polling@2.8.0
-	polling@3.3.1
+	polling@3.4.0
 	ppv-lite86@0.2.17
 	proc-macro-crate@1.3.1
-	proc-macro-crate@2.0.1
+	proc-macro-crate@3.1.0
 	proc-macro-error@1.0.4
 	proc-macro-error-attr@1.0.4
-	proc-macro2@1.0.76
-	quick-xml@0.30.0
+	proc-macro2@1.0.78
 	quick-xml@0.31.0
 	quote@1.0.35
 	rand@0.8.5
 	rand_chacha@0.3.1
 	rand_core@0.6.4
-	redox_syscall@0.4.1
-	regex@1.10.2
-	regex-automata@0.4.3
+	regex@1.10.3
+	regex-automata@0.4.5
 	regex-syntax@0.8.2
-	rgb@0.8.37
 	rustc-demangle@0.1.23
 	rustc_version@0.4.0
 	rustix@0.37.27
-	rustix@0.38.28
+	rustix@0.38.31
 	ryu@1.0.16
 	safe-transmute@0.11.2
 	same-file@1.0.6
 	semver@1.0.21
-	serde@1.0.195
-	serde_derive@1.0.195
-	serde_json@1.0.111
+	serde@1.0.196
+	serde_derive@1.0.196
+	serde_json@1.0.113
 	serde_repr@0.1.18
 	serde_spanned@0.6.5
 	sha1@0.10.6
 	signal-hook-registry@1.4.1
 	slab@0.4.9
-	smallvec@1.11.2
+	smallvec@1.13.1
 	socket2@0.4.10
 	static_assertions@1.1.0
 	syn@1.0.109
@@ -208,38 +209,31 @@ CRATES="
 	system-deps@6.2.0
 	target-lexicon@0.12.13
 	temp-dir@0.1.12
-	tempfile@3.9.0
-	termcolor@1.4.0
+	tempfile@3.10.0
 	thiserror@1.0.56
 	thiserror-impl@1.0.56
 	tinyvec@1.6.0
 	tinyvec_macros@0.1.1
-	toml@0.8.2
-	toml_datetime@0.6.3
+	toml@0.8.10
+	toml_datetime@0.6.5
 	toml_edit@0.19.15
-	toml_edit@0.20.2
+	toml_edit@0.21.1
+	toml_edit@0.22.4
 	tracing@0.1.40
 	tracing-attributes@0.1.27
 	tracing-core@0.1.32
 	typenum@1.17.0
 	uds_windows@1.1.0
-	unicode-bidi@0.3.14
+	unicode-bidi@0.3.15
 	unicode-ident@1.0.12
 	unicode-normalization@0.1.22
 	url@2.5.0
-	value-bag@1.4.3
+	utf8parse@0.2.1
 	version-compare@0.1.1
 	version_check@0.9.4
 	waker-fn@1.1.1
 	walkdir@2.4.0
 	wasi@0.11.0+wasi-snapshot-preview1
-	wasm-bindgen@0.2.89
-	wasm-bindgen-backend@0.2.89
-	wasm-bindgen-futures@0.4.39
-	wasm-bindgen-macro@0.2.89
-	wasm-bindgen-macro-support@0.2.89
-	wasm-bindgen-shared@0.2.89
-	web-sys@0.3.66
 	winapi@0.3.9
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-util@0.1.6
@@ -262,10 +256,10 @@ CRATES="
 	windows_x86_64_gnullvm@0.52.0
 	windows_x86_64_msvc@0.48.5
 	windows_x86_64_msvc@0.52.0
-	winnow@0.5.33
-	xdg-home@1.0.0
-	zbus@3.14.1
-	zbus_macros@3.14.1
+	winnow@0.5.39
+	xdg-home@1.1.0
+	zbus@3.15.0
+	zbus_macros@3.15.0
 	zbus_names@2.6.0
 	zvariant@3.15.0
 	zvariant_derive@3.15.0
@@ -281,16 +275,19 @@ inherit cargo meson xdg-utils gnome2-utils
 
 DESCRIPTION="A simple image viewer application written with GTK4 and Rust."
 HOMEPAGE="https://gitlab.gnome.org/Incubator/loupe"
-SRC_URI="https://gitlab.gnome.org/Incubator/loupe/-/archive/46.alpha/loupe-46.alpha.tar.gz
+SRC_URI="https://gitlab.gnome.org/Incubator/loupe/-/archive/46.beta/loupe-46.beta.tar.gz
     $(cargo_crate_uris)
 "
 
+IUSE="X"
+
 DEPEND="
-    >=gui-libs/gtk-4.12.0
-    >=gui-libs/libadwaita-1.3.99
+    sys-libs/libseccomp
+    >=gui-libs/gtk-4.13.6
+    gui-libs/libadwaita
     dev-libs/libgweather
     media-libs/lcms
-    media-libs/glycin
+    >=media-libs/glycin-1.0_beta
 "
 
 RDEPEND="${DEPEND}"
@@ -303,7 +300,7 @@ KEYWORDS="~amd64"
 # update with proper path to binaries this crate installs, omit leading /
 QA_FLAGS_IGNORED="usr/bin/${PN}"
 
-S="${WORKDIR}/loupe-46.alpha"
+S="${WORKDIR}/loupe-46.beta"
 
 src_prepare(){
     default
@@ -320,6 +317,7 @@ src_prepare(){
 src_configure() {
     local emesonargs=(
         -Ddisable-glycin-sandbox=false
+        -Dx11=$(if use X; then echo "enabled"; else echo "disabled"; fi)
     )
     meson_src_configure
 }
@@ -337,7 +335,7 @@ pkg_postinst() {
    xdg_icon_cache_update
    xdg_desktop_database_update
 }
-
+    
 pkg_postrm() {
    gnome2_schemas_update
    xdg_icon_cache_update
