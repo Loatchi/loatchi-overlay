@@ -279,7 +279,7 @@ SRC_URI="https://gitlab.gnome.org/Incubator/loupe/-/archive/46.beta/loupe-46.bet
     $(cargo_crate_uris)
 "
 
-IUSE="X"
+IUSE="$IUSE X"
 
 DEPEND="
     sys-libs/libseccomp
