@@ -290,7 +290,7 @@ DEPEND="
     >=gui-libs/libadwaita-1.3.99
     dev-libs/libgweather
     media-libs/lcms
-    media-libs/glycin
+    =media-libs/glycin-1.0_alpha
 "
 
 RDEPEND="${DEPEND}"
