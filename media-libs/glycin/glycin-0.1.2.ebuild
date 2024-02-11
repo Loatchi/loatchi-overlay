@@ -331,7 +331,7 @@ RDEPEND="${DEPEND}"
 
 LICENSE="LGPL-2.1 MPL-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
