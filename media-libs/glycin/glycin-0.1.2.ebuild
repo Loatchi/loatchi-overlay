@@ -318,13 +318,14 @@ SRC_URI="https://gitlab.gnome.org/sophie-h/glycin/-/archive/${PV}/glycin-${PV}.t
     $(cargo_crate_uris)
 "
 
-IUSE="$IUSE heif svg webp"
+IUSE="$IUSE heif svg webp jxl"
 
 DEPEND="
     >=gui-libs/gtk-4.12.0
     heif? ( >=media-libs/libheif-1.14.2 )
     svg? ( x11-libs/cairo )
     webp? ( media-libs/libwebp )
+    jxl? ( media-libs/libjxl )
 "
 
 RDEPEND="${DEPEND}"
