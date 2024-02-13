@@ -250,10 +250,6 @@ CRATES="
 	zvariant_utils@1.0.1
 "
 
-declare -A GIT_CRATES=(
-     [librsvg]="https://github.com/GNOME/librsvg;b831e077174ae608d8cd09e532fc0e7ce1fe5c4f"
-)
-
 inherit cargo meson xdg-utils gnome2-utils
 
 DESCRIPTION="A simple image viewer application written with GTK4 and Rust."
@@ -284,7 +280,7 @@ src_prepare(){
     default
 
     # cargo.eclass works with gitlab uris and gitlab.gnome.org is not considered a gitlab uri :-(
-    sed -i "s/gitlab.gnome.org/github.com/g" Cargo.{toml,lock} || die
+    # sed -i "s/gitlab.gnome.org/github.com/g" Cargo.{toml,lock} || die
 
     # sed -i '/librsvg/s/.*/librsvg = { path="..\/librsvg-b831e077174ae608d8cd09e532fc0e7ce1fe5c4f" }/' Cargo.toml
     sed -i "\|CARGO_HOME|s|.*|cargo_env = { 'CARGO_HOME': '${WORKDIR}/cargo_home' }|" src/meson.build
