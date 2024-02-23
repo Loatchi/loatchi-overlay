@@ -358,6 +358,11 @@ DEPEND="
     svg? ( x11-libs/cairo )
     jxl? ( media-libs/libjxl )
     webp? ( media-libs/libwebp )
+
+    sys-apps/bubblewrap
+    media-libs/lcms
+    sys-devel/gettext
+    sys-libs/libseccomp
 "
 
 RDEPEND="${DEPEND}"
