@@ -11,22 +11,21 @@ CRATES="
 	aho-corasick@1.1.2
 	android-tzdata@0.1.1
 	android_system_properties@0.1.5
-	anstream@0.6.11
+	anstream@0.6.12
 	anstyle@1.0.6
 	anstyle-parse@0.2.3
 	anstyle-query@1.0.2
 	anstyle-wincon@3.0.2
-	anyhow@1.0.79
+	anyhow@1.0.80
 	arc-swap@1.6.0
-	ashpd@0.6.8
-	async-broadcast@0.5.1
-	async-channel@2.1.1
+	ashpd@0.8.0
+	async-broadcast@0.7.0
+	async-channel@2.2.0
 	async-compression@0.4.6
-	async-io@1.13.0
 	async-io@2.3.1
 	async-lock@2.8.0
 	async-lock@3.3.0
-	async-process@1.8.1
+	async-process@2.1.0
 	async-recursion@1.0.5
 	async-signal@0.2.5
 	async-task@4.7.0
@@ -41,17 +40,16 @@ CRATES="
 	block@0.1.6
 	block-buffer@0.10.4
 	blocking@1.5.1
-	bumpalo@3.14.0
-	byteorder@1.5.0
+	bumpalo@3.15.3
 	bytes@1.5.0
-	cc@1.0.83
+	cc@1.0.86
 	cfg-if@1.0.0
-	chrono@0.4.33
-	clap@4.4.18
-	clap_builder@4.4.18
-	clap_complete@4.4.10
-	clap_derive@4.4.7
-	clap_lex@0.6.0
+	chrono@0.4.34
+	clap@4.5.1
+	clap_builder@4.5.1
+	clap_complete@4.5.1
+	clap_derive@4.5.0
+	clap_lex@0.7.0
 	colorchoice@1.0.0
 	colored@2.1.0
 	concurrent-queue@2.4.0
@@ -59,7 +57,7 @@ CRATES="
 	core-foundation@0.9.4
 	core-foundation-sys@0.8.6
 	cpufeatures@0.2.12
-	crc32fast@1.3.2
+	crc32fast@1.4.0
 	crossbeam-utils@0.8.19
 	crypto-common@0.1.6
 	deranged@0.3.11
@@ -68,18 +66,19 @@ CRATES="
 	digest@0.10.7
 	dispatch@0.2.0
 	doc-comment@0.3.3
-	either@1.9.0
+	either@1.10.0
 	encode_unicode@0.3.6
 	encoding_rs@0.8.33
-	enumflags2@0.7.8
-	enumflags2_derive@0.7.8
+	endi@1.1.0
+	enumflags2@0.7.9
+	enumflags2_derive@0.7.9
 	equivalent@1.0.1
 	errno@0.3.8
 	event-listener@2.5.3
-	event-listener@3.1.0
 	event-listener@4.0.3
+	event-listener@5.1.0
 	event-listener-strategy@0.4.0
-	fastrand@1.9.0
+	event-listener-strategy@0.5.0
 	fastrand@2.0.1
 	ferinth@2.10.0
 	flate2@1.0.28
@@ -92,7 +91,6 @@ CRATES="
 	futures-core@0.3.30
 	futures-executor@0.3.30
 	futures-io@0.3.30
-	futures-lite@1.13.0
 	futures-lite@2.2.0
 	futures-macro@0.3.30
 	futures-sink@0.3.30
@@ -104,23 +102,27 @@ CRATES="
 	h2@0.3.24
 	hashbrown@0.14.3
 	heck@0.4.1
-	hermit-abi@0.3.5
+	hermit-abi@0.3.6
 	hex@0.4.3
 	home@0.5.9
 	http@0.2.11
+	http@1.0.0
 	http-body@0.4.6
-	http-range-header@0.3.1
+	http-body@1.0.0
+	http-body-util@0.1.0
 	httparse@1.8.0
 	httpdate@1.0.3
 	hyper@0.14.28
+	hyper@1.2.0
 	hyper-rustls@0.24.2
+	hyper-rustls@0.26.0
+	hyper-util@0.1.3
 	iana-time-zone@0.1.60
 	iana-time-zone-haiku@0.1.2
 	idna@0.5.0
-	indexmap@2.2.2
-	indicatif@0.17.7
+	indexmap@2.2.3
+	indicatif@0.17.8
 	instant@0.1.12
-	io-lifetimes@1.0.11
 	ipnet@2.9.0
 	itertools@0.12.1
 	itoa@1.0.10
@@ -130,30 +132,28 @@ CRATES="
 	lazy-regex-proc_macros@3.1.0
 	lazy_static@1.4.0
 	libc@0.2.153
-	libium@1.25.0
-	linux-raw-sys@0.3.8
+	libium@1.26.2
 	linux-raw-sys@0.4.13
 	log@0.4.20
 	malloc_buf@0.0.6
 	memchr@2.7.1
-	memoffset@0.7.1
 	memoffset@0.9.0
 	mime@0.3.17
 	miniz_oxide@0.7.2
 	mio@0.8.10
 	murmur2@0.1.0
-	nix@0.26.4
+	nix@0.27.1
 	num-bigint@0.4.4
 	num-conv@0.1.0
-	num-integer@0.1.45
-	num-traits@0.2.17
+	num-integer@0.1.46
+	num-traits@0.2.18
 	num_cpus@1.16.0
 	number_prefix@0.4.0
 	objc@0.2.7
 	objc-foundation@0.1.1
 	objc_id@0.1.1
 	object@0.32.2
-	octocrab@0.33.4
+	octocrab@0.34.1
 	once_cell@1.19.0
 	openssl-probe@0.1.5
 	ordered-stream@0.2.0
@@ -165,41 +165,43 @@ CRATES="
 	pin-project-lite@0.2.13
 	pin-utils@0.1.0
 	piper@0.2.1
-	polling@2.8.0
-	polling@3.4.0
+	polling@3.5.0
 	pollster@0.3.0
 	portable-atomic@1.6.0
 	powerfmt@0.2.0
 	ppv-lite86@0.2.17
-	proc-macro-crate@1.3.1
+	proc-macro-crate@3.1.0
 	proc-macro2@1.0.78
 	quote@1.0.35
 	rand@0.8.5
 	rand_chacha@0.3.1
 	rand_core@0.6.4
-	raw-window-handle@0.5.2
+	raw-window-handle@0.6.0
 	regex@1.10.3
 	regex-automata@0.4.5
 	regex-syntax@0.8.2
 	reqwest@0.11.24
-	rfd@0.13.0
-	ring@0.17.7
+	rfd@0.14.0
+	ring@0.17.8
 	rustc-demangle@0.1.23
-	rustix@0.37.27
 	rustix@0.38.31
 	rustls@0.21.10
-	rustls-native-certs@0.6.3
+	rustls@0.22.2
+	rustls-native-certs@0.7.0
 	rustls-pemfile@1.0.4
+	rustls-pemfile@2.1.0
+	rustls-pki-types@1.3.0
 	rustls-webpki@0.101.7
-	ryu@1.0.16
+	rustls-webpki@0.102.2
+	ryu@1.0.17
 	schannel@0.1.23
 	sct@0.7.1
 	secrecy@0.8.0
 	security-framework@2.9.2
 	security-framework-sys@2.9.1
-	serde@1.0.196
-	serde_derive@1.0.196
-	serde_json@1.0.113
+	serde@1.0.197
+	serde_derive@1.0.197
+	serde_json@1.0.114
 	serde_path_to_error@0.1.15
 	serde_repr@0.1.18
 	serde_urlencoded@0.7.1
@@ -209,21 +211,22 @@ CRATES="
 	simple_asn1@0.6.2
 	size@0.4.1
 	slab@0.4.9
+	smallvec@1.13.1
 	snafu@0.7.5
 	snafu-derive@0.7.5
-	socket2@0.4.10
-	socket2@0.5.5
+	socket2@0.5.6
 	spin@0.9.8
 	static_assertions@1.1.0
-	strsim@0.10.0
+	strsim@0.11.0
+	subtle@2.5.0
 	syn@1.0.109
-	syn@2.0.48
+	syn@2.0.50
 	sync_wrapper@0.1.2
 	system-configuration@0.5.1
 	system-configuration-sys@0.5.0
 	tempfile@3.10.0
-	thiserror@1.0.56
-	thiserror-impl@1.0.56
+	thiserror@1.0.57
+	thiserror-impl@1.0.57
 	time@0.3.34
 	time-core@0.1.2
 	time-macros@0.2.17
@@ -232,11 +235,12 @@ CRATES="
 	tokio@1.36.0
 	tokio-macros@2.2.0
 	tokio-rustls@0.24.1
+	tokio-rustls@0.25.0
 	tokio-util@0.7.10
 	toml_datetime@0.6.5
-	toml_edit@0.19.15
+	toml_edit@0.21.1
 	tower@0.4.13
-	tower-http@0.4.4
+	tower-http@0.5.2
 	tower-layer@0.3.2
 	tower-service@0.3.2
 	tracing@0.1.40
@@ -247,14 +251,13 @@ CRATES="
 	uds_windows@1.1.0
 	unicode-bidi@0.3.15
 	unicode-ident@1.0.12
-	unicode-normalization@0.1.22
+	unicode-normalization@0.1.23
 	unicode-width@0.1.11
 	untrusted@0.9.0
 	url@2.5.0
 	urlencoding@2.1.3
 	utf8parse@0.2.1
 	version_check@0.9.4
-	waker-fn@1.1.1
 	want@0.3.1
 	wasi@0.11.0+wasi-snapshot-preview1
 	wasm-bindgen@0.2.91
@@ -265,6 +268,7 @@ CRATES="
 	wasm-bindgen-shared@0.2.91
 	web-sys@0.3.68
 	webpki-roots@0.25.4
+	webpki-roots@0.26.1
 	winapi@0.3.9
 	winapi-i686-pc-windows-gnu@0.4.0
 	winapi-x86_64-pc-windows-gnu@0.4.0
@@ -272,34 +276,34 @@ CRATES="
 	windows-sys@0.48.0
 	windows-sys@0.52.0
 	windows-targets@0.48.5
-	windows-targets@0.52.0
+	windows-targets@0.52.3
 	windows_aarch64_gnullvm@0.48.5
-	windows_aarch64_gnullvm@0.52.0
+	windows_aarch64_gnullvm@0.52.3
 	windows_aarch64_msvc@0.48.5
-	windows_aarch64_msvc@0.52.0
+	windows_aarch64_msvc@0.52.3
 	windows_i686_gnu@0.48.5
-	windows_i686_gnu@0.52.0
+	windows_i686_gnu@0.52.3
 	windows_i686_msvc@0.48.5
-	windows_i686_msvc@0.52.0
+	windows_i686_msvc@0.52.3
 	windows_x86_64_gnu@0.48.5
-	windows_x86_64_gnu@0.52.0
+	windows_x86_64_gnu@0.52.3
 	windows_x86_64_gnullvm@0.48.5
-	windows_x86_64_gnullvm@0.52.0
+	windows_x86_64_gnullvm@0.52.3
 	windows_x86_64_msvc@0.48.5
-	windows_x86_64_msvc@0.52.0
-	winnow@0.5.39
+	windows_x86_64_msvc@0.52.3
+	winnow@0.5.40
 	winreg@0.50.0
 	xdg-home@1.1.0
-	zbus@3.15.0
-	zbus_macros@3.15.0
-	zbus_names@2.6.0
+	zbus@4.1.1
+	zbus_macros@4.1.1
+	zbus_names@3.0.0
 	zeroize@1.7.0
-	zvariant@3.15.0
-	zvariant_derive@3.15.0
-	zvariant_utils@1.0.1
+	zvariant@4.0.1
+	zvariant_derive@4.0.1
+	zvariant_utils@1.1.0
 "
 
-inherit cargo bash-completion-r1
+inherit cargo shell-completion
 
 DESCRIPTION="Fast CLI program for managing Minecraft mods and modpacks from Modrinth, CurseForge, and Github Releases"
 HOMEPAGE="https://github.com/gorilla-devs/ferium"
@@ -309,11 +313,13 @@ SRC_URI="https://github.com/gorilla-devs/ferium/archive/refs/tags/v${PV}.tar.gz
 
 LICENSE="MPL-2.0"
 SLOT="0"
-KEYWORDS="amd64 x86 ~arm ~arm64"
+KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 
 DEPEND=""
 RDEPEND="${DEPEND}"
-BDEPEND=""
+BDEPEND="
+    >=dev-lang/rust-1.75.0
+"
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
