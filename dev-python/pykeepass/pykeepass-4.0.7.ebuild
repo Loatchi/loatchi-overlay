@@ -24,6 +24,10 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/fix_missing_pykeepass.kdbx_parsing_4.0.7.diff"
+)
+
 src_prepare() {
 	distutils-r1_src_prepare
 	sed -i 's/Cryptodome/Crypto/g' pykeepass/kdbx_parsing/{common,twofish}.py || die
