@@ -5,7 +5,7 @@ EAPI=8
 
 inherit shell-completion
 
-DESCRIPTION="A doas bash-completion script using aarchetype's pull request"
+DESCRIPTION="Add doas support for bash-completion using aarchetype's pull request."
 HOMEPAGE="https://github.com/scop/bash-completion/pull/766"
 SRC_URI="https://raw.githubusercontent.com/scop/bash-completion/2d7a7f0415158f0e5733bb259c36550fa673c3c2/completions/doas"
 
