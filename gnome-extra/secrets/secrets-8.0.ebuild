@@ -48,7 +48,7 @@ src_install() {
 	meson_src_install
 	python_optimize
 
-	sed -i '1s/.*/#!\/usr\/bin\/env python3/' "${D}/usr/bin/secrets"
+    python_fix_shebang "${D}/usr/bin/secrets"
 }
 
 src_test() {
