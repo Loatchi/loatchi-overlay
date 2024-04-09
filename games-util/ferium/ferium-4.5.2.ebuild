@@ -318,7 +318,7 @@ KEYWORDS="~x86 ~amd64 ~arm ~arm64"
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND="
-    >=dev-lang/rust-1.75.0
+    >=virtual/rust-1.75.0
 "
 
 # rust does not use *FLAGS from make.conf, silence portage warning
