@@ -7,24 +7,19 @@ EAPI=8
 # we should handle this package with care...
 PYTHON_COMPAT=( python3_{6..12} )
 inherit distutils-r1
-DISTUTILS_EXT=1
 DISTUTILS_USE_PEP517=setuptools
 
 DESCRIPTION="This library allows you to write entries to a KeePass database."
-HOMEPAGE="https://github.com/Kami/python-yubico-client"
-SRC_URI="https://github.com/Kami/python-yubico-client/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+HOMEPAGE="https://github.com/Yubico/python-yubico"
+SRC_URI="https://github.com/Yubico/python-yubico/releases/download/${P}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="debug"
-
 RDEPEND="
-	>=dev-python/requests-2.31.0[${PYTHON_USEDEP}]
+	>=dev-python/pyusb-1.2.1-r1[${PYTHON_USEDEP}]
 "
 DEPEND="${RDEPEND}"
-
-S="${WORKDIR}/python-yubico-client-${PV}"
 
 distutils_enable_tests pytest
