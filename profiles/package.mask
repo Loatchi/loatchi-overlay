@@ -10,3 +10,10 @@ games-util/capsule-farmer-evolved
 # Loatchi (2024-02-11)
 # Waiting for Gnome46.
 >=media-libs/glycin-1.0_alpha
+
+# Loatchi (2024-05-02)
+# Secrets takes an insane amount of time to start for me.
+# I'll look deeper into it when I'll have more free time.
+# You can try to unmask secrets, update it and see if it happen, on your machine...
+# Appart from the long starting time, everything should works.
+>=gnome-extra/secrets-9.0
