@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-PYTHON_COMPAT=( python3_{9..11} )
+PYTHON_COMPAT=( python3_{9..12} )
 
 inherit meson python-single-r1 xdg-utils gnome2-utils
 
@@ -16,7 +16,7 @@ SLOT="0"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 
-KEYWORDS="amd64 ~amd64"
+KEYWORDS="~amd64"
 
 DEPEND=""
 RDEPEND="${DEPEND}
@@ -26,6 +26,8 @@ RDEPEND="${DEPEND}
 	gui-libs/gtk
 	gui-libs/libadwaita
 	dev-python/pyotp
+	dev-python/python-yubico
+	dev-python/PyKCS11
 	dev-python/validators
 	dev-python/pykeepass
 	dev-python/zxcvbn
@@ -48,7 +50,7 @@ src_install() {
 	meson_src_install
 	python_optimize
 
-	python_fix_shebang "${D}/usr/bin/secrets"
+    python_fix_shebang "${D}/usr/bin/secrets"
 }
 
 src_test() {
