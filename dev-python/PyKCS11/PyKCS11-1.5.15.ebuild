@@ -14,9 +14,6 @@ HOMEPAGE="
 	https://pypi.org/project/PyKCS11/
 "
 
-RDEPEND="
-	dev-python/asn1crypto
-"
 DEPEND="${RDEPEND}"
 
 IUSE="debug"
