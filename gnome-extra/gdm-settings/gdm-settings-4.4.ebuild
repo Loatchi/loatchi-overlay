@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-PYTHON_COMPAT=( python3_{9..11} )
+PYTHON_COMPAT=( python3_{9..12} )
 
 PLOCALES="ar bn ca cs de es eu fa fi fr he hi id it ja ka ko nb nl oc pl pt pt_BR ru sv tr uk ur vi zh"
 
